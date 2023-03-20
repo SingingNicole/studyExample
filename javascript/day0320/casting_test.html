@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자동 형변환</title>
+</head>
+<body>
+	<script>
+		let num = 0;
+		if (num) {
+			document.write("0 : true");
+		} else {
+			document.write("0: false");
+		}
+		document.write("<br>");
+
+		let num1 = NaN;
+		if (num1) {
+			document.write("NaN: true");
+		} else {
+			document.write("NaN : false");
+		}
+		document.write("<br>");
+
+		let empty = "";
+		if (empty) {
+			document.write("\"\" : true");
+		} else {
+			document.write("\"\" : false");
+		}
+		document.write("<br>");
+
+		let str = "String";
+		if (str) {
+			document.write("string : true");
+		} else {
+			document.write("string : false");
+		}
+	</script>
+</body>
+</html>
