@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>호이스팅 확인 예제</title>
+<script>
+	let scope = "global";
+	function f() {
+		alert(scope); 
+		var scope = "local"; // variable 타입의 변수이므로 hoisting이 가능하다.
+		alert(scope);
+	}
+	f(); // 가장 먼저 scope가 가지고 있는 undifined가 출력된다.
+	if (true) {
+		test = true;
+	}
+	alert(test); // true(if 문이 끝났어도 변수에 여전히 접근할 수 있음)
+</script>
+</head>
+<body>
+</body>
+</html>

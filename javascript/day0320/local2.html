@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>지역 변수와 전역 변수 테스트</title>
+<script>
+	let scope = "global";
+	function checkscope() {
+		scope = "local"; // let이 붙어 있지 않아 전역변수를 가져온다.
+		document.write(scope + "<br>");
+		myscope = "mylocal"; // 새로 선언했으나 let이 붙어 있지 않으면 function 안에 있어도 전역변수가 된다.
+		document.write(myscope + "<br>");
+	}
+	checkscope();
+	document.write(scope + "<br>"); // function 안에서 선언되었으나 let이 붙지 않은 상태에서 값이 변경되어 전역변수의 값도 변경된다.
+	document.write(myscope + "<br>"); // myscope는 전역변수이므로 그대로 출력된다.
+</script>
+</head>
+<body>
+</body>
+</html>

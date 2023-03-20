@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>동치 연산자 연습</title>
+</head>
+<body>
+	<script>
+		document.write("'52' == 52: "+('52' == 52)+"<br>");
+		document.write("'52' === 52: "+('52' === 52)+"<br>");
+		document.write("<br>");
+		document.write("0 == '': "+(0 == '')+"<br>");
+		document.write("0 === '': "+(0 ==='')+"<br>");
+		document.write("<br>");
+		/* == & != 연산자: 값을 자동으로 형변환하여 비교한다.
+		   === & !== 연산자: 형변환 하지 않고 타입부터 비교한다. */
+		document.write("0 < true: "+(0 < true)+"<br>");
+		document.write("8 < 11 :"+(8 < 11)+"<br>");
+		document.write("'8' < 11 "+('8' < 11)+"<br>");
+		document.write("'8' < '11' "+('8' < '11')+"<br>"); // 타입이 같아 형변환 진행X. 연산이 아니라 문자열 간의 크기 비교이기때문에 false가 반환된다.
+	</script>
+</body>
+</html>

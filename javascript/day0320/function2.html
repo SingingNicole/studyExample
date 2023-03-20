@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 연습2</title>
+</head>
+<body>
+	<script>
+		// 이름 showMessage
+		// 이름값을 받아서 alert창으로 "안녕하세요 <이름>님" 출력
+		// 함수 호출
+		function showMessage(name = "kim") { // 매개변수에 기본값 설정
+			alert("안녕하세요 "+name+"님");
+		}
+		showMessage("javakim");
+		showMessage(); // 안녕하세요 undified님으로 출력.(기본값이 없을 경우)
+		// 기본값이 지정되어 있으면 기본값이 입력된다.
+	</script>
+</body>
+</html>

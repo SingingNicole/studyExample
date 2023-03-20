@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+ var x = 10;
+ function test(){
+	 alert(x);
+	 alert(y);
+  // alert(z); => z라는 변수가 정의되지 않아 오류가 생김.
+	 var y = 20; // variable 함수는 똑같은 이름으로 여러 번 호출 가능하다.
+  // let z = 30; // let이 붙어 있는 함수는 hoisting 되지 않는다.
+ }
+ test();
+ // hoisting을 진행하게 되면 변수를 나중에 선언하더라도 기존에 선언된 변수가 끌어올려진다.
+</script>
+</body>
+</html>
