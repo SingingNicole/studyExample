@@ -1,0 +1,29 @@
+* 자바스크립트의 undefined
+	1. 변수 선언만 하고 초기화를 하지 않았을 경우
+		= 변수에 값이 제대로 할당되지 않았음.
+	2. 객체 사용 시 없는 속성(property) 호출
+	3. 배열 사용 중 없는 인덱스 사용 시
+	4. 함수가 리턴값을 가지고 있지 않은 상태에서 저장하는 경우
+	5. 함수의 매개변수와 값의 수가 일치하지 않는 경우
+
+* 자동 형변환
+	= 예)
+		let test = "test"; // 저장되는 시점에서는 문자열 객체이다.
+		if(test){ // 문자열을 자동으로 boolean 타입으로 지정, test에 false라는 값이 저장된다.
+					// true일 때 수행할 문장
+				}
+				
+* 학습 내용 정리
+	- javascript의 개요
+	- 함수
+		- alert()
+		- confirm()
+		- prompt()
+		- document.write()
+		- hoisting
+		- 화살표 함수
+	- 지역변수와 전역변수
+	- javascript의 형변환: String(), Number(), parseInt()
+		- 연산자 우선순위
+		- 자료형 검사: typeof
+		
