@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>새해까지의 시간 계산하기</title>
+</head>
+<body>
+	<div id="remaining"></div>
+	<script>
+		function datesUntilNewYear() {
+			let now = new Date();
+			let newYear = new Date('January 1, ' + (now.getFullYear() + 1));
+
+			let diff = newYear - now;
+
+			let milliseconds = Math.floor(diff % 1000);
+			diff = diff / 1000; // 초
+
+			let seconds = Math.floor(diff % 60);
+			diff = diff / 60; // 분
+
+			let minutes = Math.floor(diff % 60);
+			diff = diff / 60; // 시간
+
+			let hours = Math.floor(diff % 24);
+			diff = diff / 24; // 일
+			let days = Math.floor(diff);
+
+			let outStr = "내년 새해까지 " + days + "일, " + hours + "시간, " + minutes
+					+ "분, " + seconds + "초 남았습니다.";
+			document.getElementById("remaining").innerHTML = outStr;
+			setTimeout("datesUntilNewYear()", 1000); // 재귀호출, 창이 꺼질 때까지 계속 반복한다.
+		}
+
+		datesUntilNewYear();
+	</script>
+</body>
+</html>

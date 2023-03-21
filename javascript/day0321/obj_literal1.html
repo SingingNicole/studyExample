@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>literal1</title>
+</head>
+<body>
+	<script>
+		let user = {
+			name : "jane",
+			age : 30
+		};
+		document.write(typeof user + "<br>");
+		// document.write(user + "<br>"); // object를 바로 출력하면 [object Object]로 나타남.
+		console.log(user);
+		document.write("<br>");
+
+		document.write("프로퍼티 읽기<br>");
+		document.write(user.name + "<br>");
+		document.write(user['age'] + "<br>");
+		let n = "name";
+		document.write(user[n] + "<br>");
+		document.write("<br>");
+
+		document.write("프로퍼티 값 update<br>");
+		user.age = 33;
+		console.log(user);
+		document.write(user['age'] + "<br>");
+		document.write("<br>");
+
+		document.write("프로퍼티 추가<br>");
+		user.job = "programmer"; // 없는 프로퍼티는 자동으로 추가된다.
+		document.write(user['job'] + "<br>");
+		document.write("<br>");
+
+		document.write("프로퍼티 삭제<br>");
+		delete user.age;
+		console.log(user);
+		document.write("<br>");
+
+		for ( let u in user) {
+			document.write(u + " , " + user[u] + "<br>"); // 프로퍼티의 값을 출력할 수 있도록 반드시 체크해야 한다!
+			// 이름은 단순 변수명으로 출력, 변수의 값은 배열로 출력한다.
+		}
+		
+		let obj = {
+				a: 1,
+				b: {x: 1, y:2},
+				c: [1, 2, 3],
+				d: "test"
+		};
+		document.write(obj.b.y + "<br>"); // 프로퍼티는 이름으로 찾는다.
+		document.write(obj.c[2] + "<br>"); // 배열은 인덱스로 요소를 찾는다.
+	</script>
+</body>
+</html>

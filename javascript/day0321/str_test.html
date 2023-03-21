@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력 제한 테스트</title>
+</head>
+<body>
+	<input id = "id">
+	<span id="msg">한글 입력 불가능</span>
+	<br>
+	<input type="button" value="확인" onclick="input_check()">
+	<script>
+		function input_check() {
+			let value = document.getElementById("id").value;
+			let patt = /[ㄱ-ㅎㅏ-ㅣ가-힣]/g;
+			let temp = patt.test(value);
+			if (temp) {
+				document.getElementById("id").value = "";
+				document.getElementById("msg").style.color = "red";
+			} else {
+				document.getElementById("msg").style.color = "black";
+			}
+		}
+	</script>
+</body>
+</html>

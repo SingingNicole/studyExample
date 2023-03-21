@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열 연습</title>
+</head>
+<body>
+	<script>
+		let myArray1 = new Array();
+		myArray1[0] = "apple";
+		myArray1[1] = "banana";
+		myArray1[2] = "orange";
+
+		let myArray2 = new Array("apple", "banana", "orange");
+
+		let myArray3 = ["apple", "banana", "orange"];
+
+		function printArray(a) {
+			document.write("[");
+			document.write(a);
+			document.write("]<br>");
+		}
+		printArray(myArray1);
+		printArray(myArray2);
+		printArray(myArray3);
+
+		let myArray4 = new Array();
+
+		myArray4['a'] = "apple";
+		myArray4['b'] = "bpple";
+		// 문자로 인덱스를 지정할 수도 있다.
+
+		document.write(myArray4['a'] + "<br>");
+		document.write(myArray4[0] + "<br>"); // undefined
+
+	</script>
+</body>
+</html>

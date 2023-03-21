@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>try catch 예제</title>
+</head>
+<body>
+	<h1>Number Guess</h1>
+	<p>1부터 100 사이의 숫자를 입력하시오.</p>
+	<input id="number" type="text">
+	<button type="button" onclick="test()">숫자 추측</button>
+	<p id="message"></p>
+
+	<script>
+		let solution = Math.ceil(Math.random() * 100); // 맞출 숫자 생성, 1부터 100 사이의 랜덤값이 설정된다.
+		console.log("solution: " + solution);
+		function test() {
+			try {
+				let x = document.getElementById("number").value;
+				if (x == "")
+					throw "입력 없음";
+				if (isNaN(x)) // 입력한 값이 숫자인지 검사
+					throw "숫자가 아님";
+				if (x > solution)
+					throw "너무 큼";
+				if (x < solution)
+					throw "너무 작음";
+				if (x == solution)
+					throw "성공";
+				// 예외 객체를 강제로 발생, 해당하는 상황의 error 메세지를 지정
+			} catch (error) {
+				let y = document.getElementById("message");
+				y.innerHTML = "힌트: " + error; // 발생한 예외를 확인하며 해당 메세지를 출력
+										// error => 문자열로 변환된다.
+				// getElementById의 경우 id 값을 찾기 때문에 #을 붙이지 않아도 되지만 query를 찾는 경우 #을 붙여 id임을 지정해야 한다.
+			}
+		}
+	</script>
+</body>
+</html>

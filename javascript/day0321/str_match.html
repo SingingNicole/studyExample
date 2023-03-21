@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문자열 찾기(매칭)</title>
+</head>
+<body>
+<script>
+    let str = 'Like father, like son. like lila lias';
+ 	// like를 찾는다. i와 g는 옵션으로 insensitive, globally(전체 다)를 의미한다.
+ 	// insensitive = 대소문자 구별하지 않고 찾음. / globally: 대소문자를 구분하고 찾음.
+    result = str.match(/li.{2}/ig); // .: 문자 하나를 의미.
+    // li로 시작하고 뒤에 문자 2개가 오는 패턴의 문자를 찾는다.
+    // i만 사용하면 가장 처음에 등장하는 단어만 찾음.
+    document.writeln(result + '<br>');
+</script>
+</body>
+</html>

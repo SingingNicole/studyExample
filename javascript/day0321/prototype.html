@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>프로토타입 연습</title>
+</head>
+<body>
+	<script>
+		function Car(model) {
+			this.model = model;
+			this.speed = 0;
+		}
+
+		Car.prototype.stop = function() {
+			this.speed -= 10;
+		}
+		Car.prototype.accel = function() {
+			this.speed += 10;
+		}
+		Car.prototype.owner = "ko"; // 모든 객체가 ko라는 owner 값을 갖는다.
+		let myCar = new Car("부가티");
+		myCar.accel();
+		myCar.accel();
+		document.write(myCar.owner+"의 차: " + myCar.model + ": " + myCar.speed + "m/s");
+		document.write("<br>");
+
+		let tayo = new Car("TAYO");
+		for (let i = 0; i < 10; i++) {
+			tayo.accel();
+		}
+		document.write(tayo.owner+"의 차: " + tayo.model + ": " + tayo.speed + "m/s");
+		console.log(tayo);
+	</script>
+</body>
+</html>
