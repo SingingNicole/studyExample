@@ -32,6 +32,12 @@
 
 		document.write(myArray4['a'] + "<br>");
 		document.write(myArray4[0] + "<br>"); // undefined
+		document.write("<br>");
+		
+		for (let i in myArray1) {
+			document.write(i + " " + myArray1[i] + "<br>"); // "/n"을 사용하면 단순히 한 칸 띄어쓰기로 바뀜
+			// 그냥 i만 적을 경우 인덱스 번호가 출력된다.
+		}
 
 	</script>
 </body>
