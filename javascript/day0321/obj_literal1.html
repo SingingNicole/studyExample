@@ -8,14 +8,15 @@
 	<script>
 		let user = {
 			name : "jane",
-			age : 30
+			age : 30,
+			married: false
 		};
 		document.write(typeof user + "<br>");
 		// document.write(user + "<br>"); // object를 바로 출력하면 [object Object]로 나타남.
-		console.log(user);
+		console.log(user); // console에서 프로퍼티의 로그를 읽을 수 있음.
 		document.write("<br>");
 
-		document.write("프로퍼티 읽기<br>");
+		document.write("프로퍼티 읽기<br>"); // 프로퍼티의 내용을 읽을 때는 어떤 프로퍼티인지 명시해야 한다.
 		document.write(user.name + "<br>");
 		document.write(user['age'] + "<br>");
 		let n = "name";
