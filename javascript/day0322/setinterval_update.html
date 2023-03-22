@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body onload="changeColor();">
+	<div id="target">
+		<p>This is a Text.</p>
+	</div>
+	<button onclick="changeColor();" id="btn">중지</button>
+	<script>
+		let id;
+		let flag = true;//true:인터벌 진행 / false : 취소
+		function changeColor() {
+			if (flag) {
+				id = setInterval(flashText, 500);
+				flag = false;
+				document.getElementById("btn").innerHTML = "중지";
+			} else {
+				stopTextColor();
+				flag = true;
+			}
+		}
+		function flashText() {
+			let elem = document.getElementById("target");
+			elem.style.color = (elem.style.color == "red") ? "blue" : "red";
+			elem.style.backgroundColor = (elem.style.backgroundColor == "green") ? "yellow"
+					: "green";
+		}
+		function stopTextColor() {
+			clearInterval(id);
+			document.getElementById("btn").innerHTML = "실행";
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+

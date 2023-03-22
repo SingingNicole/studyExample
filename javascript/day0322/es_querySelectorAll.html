@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>querySelectorAll 예제</title>
+</head>
+<body>
+	<form name="myform">
+		<input type="text" id="target" name="text1">
+		<input type="submit" value="제출" onclick="process()">
+	</form>
+	<script>
+		function process() {
+			let array = document.querySelectorAll("input");
+				for (obj in array) {
+					alert(array[obj].value);
+				}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>nextSibling 예제</title>
+</head>
+<body>
+	<form name="myform1">
+		이름: <input type="text" onfocus="showMessage(this, '이름을 입력하시오')" onblur="showMessage(this, '')"><span></span><br>
+		나이: <input type="text" onfocus="showMessage(this, '나이를 입력하시오')" onblur="showMessage(this, '')"><span></span><br>
+		주소: <input type="text" onfocus="showMessage(this, '주소를 입력하시오')" onblur="showMessage(this, '')"><span></span><br>
+	</form>
+	<script>
+		function showMessage(input, str) {
+			input.nextSibling.innerHTML = str; 
+			// 줄바꿈을 시도하려면 nextSibling을 두 번 붙여야 함.
+		}
+	</script>
+</body>
+</html>
