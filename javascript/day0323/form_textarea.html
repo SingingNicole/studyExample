@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>textarea 예제</title>
+</head>
+<body>
+	<form name="myform1">
+		<textarea name="mail" rows="10" cols="65">여기는 편지 내용을 쓰는 곳입니다.</textarea>
+		<p>
+			<input type="button" value="확인" onclick="check(this.form)">
+		</p>
+	</form>
+	<script>
+		function check (form) {
+			alert(form.mail.value);
+		}
+	</script>
+</body>
+</html>

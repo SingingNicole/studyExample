@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>셀렉트 예제2</title>
+</head>
+<body>
+	<form>
+		Select your favorite fruit: <select>
+			<option id="apple">Apple</option>
+			<option id="orange">Orange</option>
+			<option id="pineapple" selected>Pineapple</option>
+			<option id="banana">Banana</option>
+		</select>
+	</form>
+
+	<p>Pineapple -> Orange</p>
+
+	<button onclick="myFunction()">Try it</button>
+
+	<script>
+		function myFunction() {
+			document.getElementById("orange").selected = "true"; // 선택된 옵션이 해당 값으로 변경된다.
+		}
+	</script>
+</body>
+</html>
