@@ -1,0 +1,26 @@
+* 객체의 값 꺼내기
+	- 배열: 배열[인덱스]
+		   배열.foreach((item, index) => {//..}): 배열의 요소를 꺼내기를 반복(콜백함수 형성).
+	- 객체: 객체.속성명 / 객체["속성명"]
+
+* 새로운 창 열기
+	- (window.)open("url", "name", "창의 상태(크기, 메뉴바, ...)", 히스토리의 true/false 여부)
+		- window는 전역객체라 전부 가지고 있다.
+	- opener: 현재 열려 있는 창을 연 창 / self: 현재 창
+	- (원하는 창.)close();: 해당 창을 닫음
+
+* 새로운 창으로 이동
+	<a href="https://www.w3.org">이동</a>: 하이퍼링크 이용
+	<button onclick="location.href='https://www.w3.org'">이동</button>
+	<button onclick="location.replace('https://www.w3.org')">이동</button>
+	
+* 이전 페이지로 이동
+	<button onclick="history.go(-1)">전 페이지로 이동</button>
+	
+* 문서에서 원하는 태그를 찾기, 속성 변경, 태그 추가 등의 메서드
+
+* 상태코드
+	- 200: 정상 처리
+	- 404: 경로 틀림 => url 체크
+	- 405: 지원하지 않는 전송 방식
+	- 500: 서버에서 프로그램 실행 시 에러가 발생
