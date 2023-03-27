@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>앵커 태그 무효화 예제 2</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$("a").click(function() {
+			$("img").attr("src", "sea.jpg")
+					.attr("alt", " 바다");
+		});
+	});
+</script>
+</head>
+<body>
+	<a href="sea.jpg">화면을 변경</a>
+	<p><img alt="꽃" src="flower.jpg"></p>
+	<!-- 앵커 태그가 있어 바뀌는 것이 아니라 새로운 이미지로 열리게 된다. -->
+</body>
+</html>
