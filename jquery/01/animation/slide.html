@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>slideUp/slideDown 예제</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+	d1 {
+		width:300px;
+		margin:50px auto;
+	}
+	
+	dl dt {
+		background:#000000;
+		color:white;
+		cursor:pointer; /* 마우스 커서 모양을 클릭 커서 모양으로 변경 */
+	}
+	
+	dl dd {
+		border:10px solid #7CADB6;
+		height:250px;
+		margin:0;
+	}
+</style>
+<script>
+	$(function() {
+		$("dt").click(function() {
+			if ($("dd").css("display") == "block") {
+				$("dd:not(:animated)").slideUp("slow");
+			} else {
+				$("dd").slideDown("slow");
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<dl>
+		<dt>슬라이딩 효과로 표시상태를 변경한다.</dt>
+		<dd>slideDown()/slideUp()는 show()/hide()와는 다른 슬라이드 애니메이션 효과로 표시/비표시를 변경하는 명령어입니다.</dd>
+	</dl>
+</body>
+</html>

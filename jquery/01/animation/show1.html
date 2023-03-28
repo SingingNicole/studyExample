@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>show 예제 1</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+	div {
+		width:300px;
+		height:300px;
+		background:red;
+		display:none;
+	}
+</style>
+<script>
+	$(function() {
+		$("button").click(function() {
+			$("div").show("normal"); // 지정X, "slow", "normal", "fast", ms의 5가지 방법이 있다.
+		});
+	});
+</script>
+</head>
+<body>
+	<button>표시</button>
+	<div></div>
+</body>
+</html>
