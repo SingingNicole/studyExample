@@ -1,0 +1,58 @@
+*wrapper : primitive(기본형) 타입을 객체로 감싸야 하는 경우 때문에 만들어졌음
+		   메서드의 매개변수가 Object 타입 -> 객체만 저장
+		   컬렉션 - 객체들을 모아서 저장하는 공간
+		   객체와 비교 -> 객체 간의 비교
+		   
+		   기본형 데이터를 객체로 다룰 수 있게 wrapper class 선언
+		   - 기본형 데이터를 저장
+		   - 상수
+		   - 메서드
+
+wrap : 감싸다
+
+int i = 10;
+
+Boolean
+Character
+Byte
+Short
+Integer : 가장 많이 사용! int 값을 객체로 저장, 표현
+Long
+Float
+Double
+=> 앞 문자가 대문자일 경우 wrapper class이다
+   기본형 데이터 타입을 객체로 저장
+
+Object obj = new Integer(10); // Integer 생성자는 주로 직접 사용하지는 않는다
+
+참조형 <-> 기본형 간의 형변환은 불가능함
+단, wrapper 클래스는 형변환이 되는 것처럼 코드를 작성할 수 있다.
+Autoboxing  기본형 -> wrapper
+Integer intg = 10;
+
+Unboxing wrapper -> 기본형
+int i = new Integer(10);
+
+컬렉션(자료구조) - 객체들을 모아서 저장하는 공간
+List : 순차적으로 자료를 관리
+	   저장한 순서를 유지하면서 객체를 저장한다.
+	   인덱스로 객체를 꺼내서 사용한다.
+	   중복값을 허용한다.
+	   객체를 하나씩 저장(element)
+
+set : 저장한 순서를 유지하지 않음. ex) 바구니 안에서 공을 랜덤으로 꺼내기
+	  객체를 하나씩 저장(element)
+
+Map : mapping -> put 메서드로 저장
+	  key - value 의 두 개의 객체가 한 쌍(entry)를 이뤄서 저장
+	  key를 이용해 매핑된 value를 가져온다.(key를 모르면 사용 불가)
+	  key는 중복 불가, value는 중복 가능
+	=> 이름으로 데이터를 찾아 간다
+
+제네릭스 : 컬렉션에 저장될 객체의 타입을 미리 정해두면 해당 타입의 객체만 저장할 수 있다.
+	- 제네릭을 지정하여 컬렉션에 저장
+
+List <String> = > List 구현 객체 안에 저장되는 데이터는 String타입만 가능하다.
+	- Object로 명시할 경우 모든 객체를 전부 저장 가능
+Map <Integer, String> = > key는 Integer로, value는 String으로 저장한다.
+			 - > super를 사용하기도 하나 자주 쓰지는 X

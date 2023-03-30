@@ -1,0 +1,20 @@
+배열과 리스트
+
+크기가 정해졌을 때는 배열 사용, 크기가 없을 땐 ArrayList
+
+properties -> 속성을 여러 개 모아서 저장
+				속성 : 이름, 값
+
+list.add(값); => 리스트에 저장
+
+HashSet<E> set = new HashSet<>();
+set.add(값);
+
+foreach/Iterator => 모든 데이터를 한 번에 다 꺼내와야 함
+
+- Scanner로 입력 받은 날짜값의 6개월 후 날짜
+ : String -> Date -> Calendar.add(Calendar.MONTH, 6)
+-> Date - String 포맷
+
+DB의 날짜 데이터를 java로 표현 시 Date 클래스를 사용한다.
+

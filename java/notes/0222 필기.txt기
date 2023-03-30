@@ -1,0 +1,26 @@
+람다 / 스트림
+
+*람다
+ : 인터페이스가 메서드를 하나만 가지고 있는 객체를 구현할 때 사용
+   new 명령어 등이나 변수를 선언하지 않고 사용 가능하다.
+   () -> {}의 형식이나 ::기호를 사용하여 표기
+   타입 :: 메서드명 => 해당 타입의 객체를 매개로 메서드 호출
+   타입 :: new => 객체를 사용할 수 있도록 오버라이딩
+
+*IO package
+ : input / output에 대한 데이터 스트림
+	-data stream: 데이터가 이동하는 통로
+	-java.nio
+	
+경로 표기: 역슬래시는 반드시 2개
+
+*network
+ -Byte Stream
+  : 음악 등의 파일에 활용
+ -Character Stream
+  : 문자에 활용
+  
+ char : 글자 1개(2바이트)
+ 
+ getBytes() String -> Byte[]
+ new String(byte[]) byte -> String

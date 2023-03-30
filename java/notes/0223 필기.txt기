@@ -1,0 +1,9 @@
+new String(byte[]) byte[] -> String
+
+file에 buffer를 사용해 int 값 저장
+
+new FileInputStream("파일 경로")
+new BufferedInputStream(파일인풋스트림)
+new DataInputStream()
+
+new PrintStream => 콘솔이 아닌 다른 곳에 출력하고 싶을 때

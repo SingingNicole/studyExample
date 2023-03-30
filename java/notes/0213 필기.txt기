@@ -1,0 +1,43 @@
+class
+interface => 표준
+인터페이스에 맞추어 다양한 클래스를 만든다
+공통된 요소들은 인터페이스에 추상 클래스로
+impelement => 인터페이스를 클래스에서 구현
+enum
+*추상화 정도
+인터페이스 -> 추상 클래스 -> 일반 클래스
+
+new 선언 => 인스턴스 메모리에 객체 생성(인스턴스화)
+-> 인스턴스 변수를 초기화
+
+
+variable
+method
+constructor
+
+abstract method : 바디가 없는 메서드
+overriding
+
+접근제어자의 종류
+private / protected : 같은 클래스 내에서만 사용 가능
+=> 클래스 이름 앞에는 사용 불가
+=> 데이터를 보호하는 캡슐화 패턴
+() : 디폴트
+public
+
+싱글턴 패턴 : 객체를 한 번만 생성할 수 있도록 함
+
+polymorphism
+
+Enum : 한정된 값만 가지는 데이터 타입
+	   몇 개의 열거상수를 선언해 둔다.
+	   그 중 하나의 상수를 저장한다.
+	   
+String week = "월요일";
+			= "월";
+			= "Monday";
+			= "Mon";
+			
+public enum Week{ // 열거상수
+	MON, TUE, WED, THU, FRI, SAT, SUN
+}

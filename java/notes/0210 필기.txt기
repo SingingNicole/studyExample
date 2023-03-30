@@ -1,0 +1,91 @@
+public + 클래스 메서드 생성자 멤버변수
+protected # 메서드 생성자 멤버변수
+(default) ~ 클래스 메서드 생성자 멤버변수
+private - 메서드 생성자 멤버변수
+
+생성자의 접근제어자 - 클래스의 접근제어자를 똑같이 붙여야 한다.
+			   객체를 하나만 만들어야 하는 경우만 접근제어자를 변경함
+
+A 클래스에 싱글턴 패턴 적용하기
+public class A{
+
+	private static A a = new A(); // static 객체 선언
+	private A(){} // 생성자 선언
+
+	public static A getInstance(){ // 객체를 리턴하는 public static 메소드
+		if(a == null){
+		a = new A();
+		}
+		return a;
+	}
+	// 멤버가 더 있으면 멤버 선언
+}
+
+class B{
+	public static void main(String[] args){
+		A a1 = A.getInstance(); // 싱글턴 패턴이 적용된 객체의 값 호출
+	}
+
+캡슐화의 적용
+
+class Test{
+	private String subject;
+	private int score;
+
+	Test(String subject, int score){
+		this.subject = subject;
+		this.score = score;
+	}
+
+	public String getSubject{
+		return subject;
+	}
+
+	public void setSubject(String subject){
+		this.subject = subject;
+	}
+
+	public int getScore{
+		return score;
+		}
+
+	public void setSubject(int score){
+		this.score = score
+	}
+}
+
+메서드 오버라이딩
+
+정적 바인딩 - 클래스 메서드, 멤버변수
+동적 바인딩 - 인스턴스 메서드
+
+정적 바인딩 - compile 시점에 타입이 결정
+		- 참조변수의 타입을 따라감
+
+동적 바인딩 : 다형성으로 객체를 다룰 때 인스턴스 메서드 호출 시 적용
+		  실행 시점에 타입이 결정된다.
+		  실제 참조하고 있는 객체의 타입을 따라간다.
+		  
+* 다형성으로 객체를 다룰 때 인스턴스 메서드 호출 시 오버라이딩 된 메서드가 호출된다.
+ +) static 메서드는 오버라이딩 불가
+ 
+interface의 특징
+- 상수와 추상 메서드만 가진다
+- 생성자 없음 -> 객체를 생성할 수 없다
+- 일반 클래스에서 상속 받아서 추상 메서드를 오버라이딩하여 사용
+ => 인터페이스를 구현한다(implement)
+- 클래스에 의해 다중 구현(하나의 클래스가 여러 개의 인터페이스를 상속받을 수 있다)
+- 인터페이스와 인터페이스 간에 상속이 가능하다(다중 상속(extends) 가능)
+ => 인터페이스와 인터페이스의 다중 상속에는 메서드의 오버라이딩이 불가능하다(최고 조상이 없음)
+- 상속과 구현을 동시에 할 수 있다
+ class Sub extends SuperClass
+ implements Superinterface1, Superinterface2
+ {}
+- 구현과 상속은 의미는 조금 달라도 결과는 같다
+
+*인터페이스 선언
+interface 이름{
+	상수
+	추상 메서드
+}
+
