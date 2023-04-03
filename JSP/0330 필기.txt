@@ -1,0 +1,17 @@
+* JSP와 일반 class
+	- class => 웹 요청을 받을 수 없음.
+	- servlet class => 웹 요청을 받을 수 있는 클래스
+		일반 클래스에서 extends Servlet(서블렛 상속)을 진행하면 웹 요청을 받을 수 있게 된다.
+		
+* servlet class의 생성과 메서드
+	- servlet class의 상속:
+		@WebServlet("요청 uri")
+		class 클래스명 extends Servlet;
+	- servlet 클래스의 기본 메서드
+		- doGet(): get 방식의 요청이 들어 왔을 때 실행
+		- doPost(): post 방식의 요청이 들어 왔을 때 실행
+		
+		+ 요청 uri = 첫 번째 경로(쿼리 문자열까지 제거한다.) = url에서 콘텍스트 루트까지 제거
+			=> url: http://localhost:8080/contextroot/file
+			=> uri: /file
+
