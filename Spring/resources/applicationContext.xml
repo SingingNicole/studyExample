@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean name="writeArticleService"  class="spring.ch01.WriteArticleServiceImpl" > <!-- 해당 문서를 객체로 만들었다. -->
+		<constructor-arg>
+			<ref bean="articleDao" /> <!-- articleDao bean을 참조 -->
+		</constructor-arg>
+	</bean>
+
+	<bean name="articleDao" class="spring.ch01.MySQLArticleDao"></bean>
+
+</beans>
