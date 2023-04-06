@@ -1,0 +1,31 @@
+* Maven: 형상관리 툴
+	- pom.xml 문서를 활용한다.
+
+* entry 코드
+<entry>
+	<key><value>2</value></key>
+	<value>안녕</value>
+</entry>
+
+* bean의 type과 상속
+// class A {}
+interface A {}
+class B extends A {} // A를 상속
+class C extends A {} // A를 상속
+class D extends B {} // B를 상속
+	=> 이어져 있는 경우 무조건 상속 관계!
+	 ex)  C와 D는 상속관계가 아니지만 A와 D는 상속관계이다.
+
+class Test {
+	A a; // A, B, C, D가 모두 들어갈 수 있음
+	public void setA(A a) {
+		this.a = a;
+	}
+}
+---
+<bean id="test" class="패키지.Test" autowire="byType"/>
+<bean id="b" class="패키지.B"/> => a 위치에 들어간다.
+	=> 해당하는 타입과 일치하는 타입이 없다면 나와 제일 가까운 자손 타입의 bean이 들어간다.
+<bean id="d" class="패키지.D"/> => B가 D보다 가까우므로 B가 들어간다.
+<bean id="c" class="패키지.C"/> => B와 C가 같은 레벨이므로 오류가 생긴다.
+	=> super 클래스는 interface로 만드는 것이 좋다.
