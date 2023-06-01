@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Image_map</title>
+</head>
+<body>
+	<map name="cheetah_meow">
+		<area shape="rect" coords="158,29,240,82"
+			href="https://www.youtube.com/watch?v=eC5-0uAU1Gc" target="_blank">
+		<area shape="circle" coords="206,138,32"
+			href="https://www.youtube.com/watch?v=O4sS_-dR3Cc" target="_blank">
+	</map>
+	<map>
+		
+	</map>
+	<img src="../img/Cheetah_(Acinonyx_jubatus)_female_2.jpg"
+		alt="치타와 이미지 맵" usemap="#cheetah_meow">
+</body>
+</html>

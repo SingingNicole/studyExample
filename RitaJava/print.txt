@@ -1,0 +1,4 @@
+true
+string
+100
+A

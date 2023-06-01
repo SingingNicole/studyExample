@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>셀렉트 연습 2</title>
+<style type="text/css">
+li>span {
+	color: blue;
+}
+
+#second+li { /* 바로 밑에 있는 형제 태그에 적용 */
+	color: orange;
+}
+
+#third ~ li { /* 같은 부모에 있는 li 태그 중 바로 밑에 있는 태그를 모두 바꿈 */
+	color: fuchsia;
+}
+
+p a { /* p 태그 안의 자손 a */
+	background-color: aqua;
+}
+
+p.a { /* p 태그 중에서 클래스가 a인 경우 */
+	background-color: lime;
+}
+/* li * {background-color: orange;}: p *=> 특정 태그의 모든 자손 태그를 의미한다. */
+</style>
+</head>
+<body>
+	<p><a href="#">This</a> is a paragraph.</p>
+	<p class="a">This is a paragraph2.</p>
+	<ul>
+		<li id="first"><strong>text <em>text</em></strong></li>
+		<li id="second"><span>text</span> text text text text</li>
+		<li id="third">text text text text text text text</li>
+		<li id="fourth">text text text text text</li>
+	</ul>
+</body>
+</html>

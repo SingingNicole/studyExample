@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>new document</title>
+<script>
+	let scope = "global";
+	function checkscope() {
+		let scope = "local";
+		function nested() {
+			let scope = "nest";
+			document.write(scope);
+		}
+		document.write(scope);
+		nested();
+	}
+	checkscope();
+	nested(); // checkscope 안에서 선언된 함수이므로 실행이 불가능하다.
+	document.write(scope); // 윗줄에서 에러가 발생하여 수행되지 않는다.
+</script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>절대 위치 설정</title>
+<style>
+#one {
+	background-color: cyan;
+	width: 200px;
+	height: 50px;
+}
+
+#two {
+	position:absolute;
+	left: 30px;
+	top: 30px;
+	/* position이 absolute일 경우 부모 태그를 기준으로 이동한다.
+	   id가 two인 div 태그의 객체의 부모 태그는 body 태그이므로 body를 기준으로 이동함. */
+	background-color: yellow;
+	width: 200px;
+	height: 50px;
+}
+
+#three {
+	background-color: lightgreen;
+	width: 200px;
+	height: 50px;
+	/* absolute 태그를 적용할 경우 객체의 위치를 기억할 필요가 없어 다음 객체인 three가 one 바로 밑에 위치하게 된다. */
+}
+</style>
+</head>
+<body>
+	<p id="one">block #1</p>
+	<div id="two">
+		block #2<br/> position:static;<br/>
+	</div>
+	<p id="three">block #3</p>
+</body>
+</html>

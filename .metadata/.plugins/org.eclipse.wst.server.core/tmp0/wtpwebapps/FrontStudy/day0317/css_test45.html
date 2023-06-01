@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>overflow 테스트</title>
+<style>
+p {
+	background-color: lightgreen;
+	width: 200px;
+	height: 50px;
+}
+
+#target {
+	border: 1px solid black;
+	width: 300px;
+	height: 100px;
+	overflow: scroll;
+} /* target에서 지정한 px 범위를 넘어갈 경우(overflow) 처리하는 방법 설명. */
+</style>
+</head>
+<body>
+	<div id="target">
+		<p>block #1</p>
+		<p>block #2</p>
+		<p>block #3</p>
+		<p>block #4</p>
+		<p>block #5</p>
+	</div>
+</body>
+</html>

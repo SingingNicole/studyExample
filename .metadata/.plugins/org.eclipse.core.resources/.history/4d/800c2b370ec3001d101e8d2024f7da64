@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>buttonTest</title>
+</head>
+<body>
+	<button>일반 버튼입니다.</button><br>
+	<input type="button" value="일반 버튼">
+</body>
+</html>

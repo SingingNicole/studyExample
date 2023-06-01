@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>fetch 예제1</title>
+<script>
+	fetch('sample5_load.json')
+	.then(resp => resp.json()) // json 객체의 값을 그대로 가져 온다.
+	.then(json => {
+		let emp = "";
+		json.employees.forEach((item) => {
+			emp += "<h2>" + item.firstName + " " + item.lastName + "</h2>";
+		}) // foreach end
+		document.querySelector(".console").innerHTML = emp;
+	});
+</script>
+</head>
+<body>
+<!-- fetch: jquery 사용 시 외부 링크로 많은 문서를 읽어 와야 하는 단점을 상쇄.
+			상대적으로 빠른 속도로 json 데이터를 읽어 올 수 있다. -->
+	<div class="console" id="result"></div>
+</body>
+</html>

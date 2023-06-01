@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>throw</title>
+</head>
+<body>
+	<script>
+		try {
+			let jsonData = '{"name":"John"}'; // 서버로부터 전달받은 JSON 데이터
+			let user = JSON.parse(jsonData); // 문자열 -> js object
+			alert(user.name);
+			alert(user.age);
+			if (!user.age) {
+				throw new Error("age 프로퍼티 없음.");
+			}
+		} catch (e) {
+			alert("데이터에 에러 있음.");
+			alert("e.name: " + e.name);
+			alert("e.message: " + e.message);
+			alert(e);
+		}
+	</script>
+</body>
+</html>

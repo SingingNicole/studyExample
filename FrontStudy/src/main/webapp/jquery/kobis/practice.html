@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>박스오피스 조회</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		let y = new Date();
+		y.setDate(y.getDate() - 1);
+		let str = y.getFullYear() + "-"
+		+ ("0" + (y.getMonth() + 1)).slice(-2) + "-"
+		+ ("0" + y.getDate()).slice(-2);
+		$("#date").attr("max", str);
+		
+		let url = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888";
+		
+		$("#mybtn").click(function() {
+			let d = $("#date").val();
+			const regex = /-/g;
+			let d_str = d.replace(regex, "");
+			
+			$.getJSON(url + "&targetDt=" + d_str, function(data) {
+				$("#pdate").html(data.boxOfficeResult.showRange);
+				$("#boxoffice div").empty();
+				let movieList = data.boxOfficeResult.dailyBoxOfficeList;
+				
+				for(let i in movieList) {
+					$("#boxoffice div").append(
+						"<p id=" + movieList[i].movieCd + ">" + movieList[i].rank 
+						+ "위: <" + movieList[i].movieNm + "(" + movieList[i].openDt + ")" + ">"
+						+ movieList[i].audiAcc + "명</p>"
+					);
+				}
+			});
+		});
+		
+		$("#boxoffice").on("click", "p[id]", function() {
+			$("div", this).remove();
+			let movieCd = $(this).attr("id");
+			let url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json?key=f5eef3421c602c6cb7ea224104795888";
+			$.getJSON(url, {"movieCd" : movieCd}, function(data) {
+				let m = data.movieInfoResult.movieInfo;
+				let minfo = `
+					<div>상영시간(분): ${m.showTm}, 종류: ${m.typeNm}, 장르: ${m.genres[0].genreNm}, 감독: ${m.directors[0].peopleNm}<hr></div>
+				`;
+				$("#" + movieCd).append(minfo);
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="date" id="date">
+	<button id="mybtn">선택</button>
+	<div id="boxoffice">
+		<div>
+			<p><span id="pdate"></span> 박스 오피스 순위</p>
+		</div>
+	</div>
+</body>
+</html>

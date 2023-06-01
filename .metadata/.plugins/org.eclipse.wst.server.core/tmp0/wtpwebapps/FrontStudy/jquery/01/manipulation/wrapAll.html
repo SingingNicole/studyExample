@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>wrapAll 테스트</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+	$("strong").wrapAll("<h1></h1>"); // 모든 strong 태그를 모아서 하나의 h1 태그로 묶는다.
+	// 위치가 떨어져 있을 경우 전부 위로 모아서 올려 묶는다.
+});
+</script>
+</head>
+<body>
+	<strong>텍스트텍스트</strong>
+	<p>텍스트텍스트텍스트텍스트</p>
+	<div>텍스트텍스트텍스트텍스트</div>
+	<strong> 텍스트 텍스트</strong>
+</body>
+</html>

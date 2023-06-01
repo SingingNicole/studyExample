@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jsp 데이터 연습</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$("#mybtn").click(function() {
+			// list => 배열로 저장된다.
+			$.getJSON("data.jsp", function(fruits) { // data를 받아 올 필요가 없으므로 생략.
+				// console.log(fruits); // 받아온 객체 출력해보기.
+				for (let i in fruits) {
+					for (let j in fruits[i]) {
+						$("#result").append("<h4>" + fruits[i][j] + "</h4");
+					}
+				}
+			}); // ajax
+		}); // click
+	}); // ready
+</script>
+</head>
+<body>
+	<button id="mybtn">눌러보세요</button>
+	<div id="result"></div>
+</body>
+</html>

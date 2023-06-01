@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animate 예제</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+	p {
+		width:800px;
+		height:267px;
+		margin:0;
+	} /* 이미지가 들어가 있는 영역을 p태그로 감싸 이동한다. */
+
+	div {
+		width:400px;
+		height:267px;
+		overflow:hidden; 
+	} /* div 태그를 활용하여 해당하는 영역의 이미지만 보여준다. */
+</style>
+<script>
+	$(function() {
+		$("#flower").click(function() {
+			$("p:not(:animated)").animate({
+				marginLeft: "-400px" // p태그를 이동하면서 이미지를 번갈아 보여 준다.
+				// marginLeft: 왼쪽 여백
+			},"slow","swing");
+		});
+		$("#building").click(function() {
+			$("p:not(:animated)").animate({
+				marginLeft: "0"  // 이동했던 마진을 원래 위치대로 돌려 놓음.
+			},"slow","swing"); // swing: 점점 빠르게 움직인다, linear: 일정한 속도로 움직인다.
+		});
+	});
+</script>
+</head>
+<body>
+	<div><p><img src="flower.jpg" alt="flower" id="flower"/><img src="building.jpg" alt="building" id="building" /></p></div>
+</body>
+</html>

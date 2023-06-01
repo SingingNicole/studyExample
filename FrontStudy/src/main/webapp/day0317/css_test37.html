@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정적 위치 설정</title>
+<style>
+#one {
+	background-color: cyan;
+	width: 200px;
+	height: 50px;
+}
+
+#two {
+	position: static;
+		/* 위치를 static으로 둘 경우 인라인 요소들은 차례로 배치되며, 블록 요소들은 순서대로 쌓이는 형태로 배치된다.
+	   	   static 포지션이 기본 위치. */
+	background-color: yellow;
+	width: 200px;
+	height: 50px;
+}
+
+#three {
+	background-color: lightgreen;
+	width: 200px;
+	height: 50px;
+}
+</style>
+</head>
+<body>
+	<p id="one">block #1</p>
+	<div id="two">
+		block #2<br/> position:static;<br/>
+	</div>
+	<p id="three">block #3</p>
+</body>
+</html>

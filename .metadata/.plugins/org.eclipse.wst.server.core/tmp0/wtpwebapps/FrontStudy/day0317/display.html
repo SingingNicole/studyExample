@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>디스플레이 테스트</title>
+<style type="text/css">
+div {
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+	display: inline-block; /* 단순히 inline만 입력한다면 width/height를 무시한다. */
+}
+#target:hover {
+	display: none; /* width&height가 0이 되기 때문에 옆에 있는 컨텐츠가 당겨져 온다. */
+}
+</style>
+</head>
+<body>
+	<div id="target">거울속에는소리가없오</div>
+	<div>저렇게까지조용한세상은참없을것이오</div>
+</body>
+</html>

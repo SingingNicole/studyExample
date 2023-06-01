@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=RitaSpringJava/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;spring.ch01{ArticleDao.java[ArticleDao" modifiers="513" timestamp="1680682439230"/>
+    <typeInfo handle="=RitaSpringJava/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;spring.ch01{WriteArticleService.java[WriteArticleService" modifiers="513" timestamp="1680682566049"/>
+    <typeInfo handle="=RitaSpringJava/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;spring.aop{GreetingService.java[GreetingService" modifiers="513" timestamp="1680851749834"/>
+    <typeInfo handle="=Ex02_JAvaCodeDI/src\/main\/java=/gradle_scope=/main=/=/gradle_used_by_scope=/main,test=/&lt;com.study.springboot.bean{Printer.java[Printer" modifiers="513" timestamp="1681108728528"/>
+    <typeInfo handle="=Board/C:\/Users\/soldesk\/.gradle\/caches\/modules-2\/files-2.1\/org.springframework\/spring-webmvc\/6.0.7\/2fdde1a0d3706a85fe318a4f6ebffb4f4f7c4c6d\/spring-webmvc-6.0.7.jar=/gradle_used_by_scope=/main,test=/&lt;org.springframework.web.servlet(HandlerInterceptor.class[HandlerInterceptor" modifiers="1537" timestamp="1680858725498"/>
+</typeInfoHistroy>

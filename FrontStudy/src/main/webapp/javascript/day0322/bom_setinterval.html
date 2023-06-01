@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>인터벌 테스트 예제</title>
+<style>
+#start {
+	display: none;
+}
+</style>
+</head>
+<body onload="changeColor();">
+	<div id="target">
+		<p>This is a Text.</p>
+	</div>
+	<button id=stop onclick="stopTextColor();">중지</button>
+	<button id=start onclick="changeColor()">실행</button>
+
+	<script>
+		let id;
+		function changeColor() {
+			id = setInterval(flashText, 500);
+			document.getElementById("start").style.display = 'none';
+			document.getElementById("stop").style.display = 'block';
+		}
+		function stopTextColor() {
+			clearInterval(id)
+			document.getElementById("stop").style.display = 'none';
+			document.getElementById("start").style.display = 'block';
+		}
+		function flashText() {
+			let elem = document.querySelector("#target");
+			elem.style.color = (elem.style.color == "red") ? "blue" : "red";
+			elem.style.backgroundColor = (elem.style.backgroundColor == "green") ? "yellow" : "green";
+		}
+	</script>
+</body>
+</html>

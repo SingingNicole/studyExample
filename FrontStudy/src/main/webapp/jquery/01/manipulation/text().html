@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>text()예제</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$("p#second").text($("p#first").text()); // second의 값을 first가 가지고 있는 문자열 값으로 변경.
+	});
+</script>
+</head>
+<body>
+	<p id="first">가져온 문자열</p>
+	<p id="second">변경전</p>
+</body>
+</html>

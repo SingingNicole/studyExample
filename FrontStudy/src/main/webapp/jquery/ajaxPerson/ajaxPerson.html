@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getPerson 데이터 요청</title>
+<script src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+	$(function() {
+		$("#btn").click(function() {
+			$.ajax({
+				url:"getPerson.jsp",
+				type:"get",
+				datatype:"json"
+				// cache와 timeout은 생략 가능.
+			}).done(function(data) {
+				data.forEach(function(person, index) {
+					$("tbody").append("<tr>");
+					$("tbody").append(
+						`
+						<td>${index + 1}</td>
+						<td>${person.name}</td>
+						<td>${person.age}</td>
+						<td>${person.gender}</td>
+						`
+					);
+					$("tbody").append("</tr>");
+				});
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<button id="btn">회원 정보 확인</button>
+	<table border="1">
+		<thead>
+			<tr><th>번호</th> <th>이름</th> <th>나이</th> <th>성별</th></tr>
+		</thead>
+			<tbody></tbody>
+	</table>
+</body>
+</html>

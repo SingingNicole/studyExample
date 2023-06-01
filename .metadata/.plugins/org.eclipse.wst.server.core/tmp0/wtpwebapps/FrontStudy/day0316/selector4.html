@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>속성 선택자</title>
+<style type="text/css">
+/* p[title] {
+	color: blue;
+}*/
+p[title="para"] {
+	color: red;
+}
+</style>
+</head>
+<body>
+	<p title="para" class="target">Lorem ipsum dolor sit amet</p>
+	<p><span class="target">Lorem ipsum dolor sit amet</span></p>
+	<p title="Lorem">Lorem ipsum dolor sit amet</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form 찾기</title>
+</head>
+<body>
+	<form name="myform">
+		<input type="text" id="target" name="text1">
+		<input type="submit" value="제출" onclick="process()">
+	</form>
+	<script>
+	// forms: form 태그들을 모아 둔 배열
+	// elements: form 안에 선언한 입력태그들을 모아둔 배열
+	// (input, select/option, textarea, button)
+		function process() {
+			let obj = document.myform.text1;
+			// let obj = document.forms[0].text1;
+			// let obj = document.forms[0].elemets[0];
+			// let obj = document.myform.elements[0];
+			alert(obj.value);
+		}
+	</script>
+</body>
+</html>

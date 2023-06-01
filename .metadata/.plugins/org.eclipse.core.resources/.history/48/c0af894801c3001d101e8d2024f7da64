@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+</head>
+<body>
+	<!-- action을 지정하지 않으면 현재 URL이 다시 요청된다. -->
+	<form name="form1" method="get">
+		<!-- from 안에 입력한 내용을 method 방식으로 전송 후 action에 지정한 페이지 실행 -->
+		<p>
+			<label for="name">이름: </label><input type="text" id="name"
+				name="name">
+		</p>
+		<p>
+			<label for="passwd">비밀번호: </label><input type="password" id="passwd"
+				name="pwd">
+			<!-- input type="password"는 한글 입력이 불가능하다. -->
+		</p>
+		<!-- * id: 현재 화면(문서)에서 태그를 찾는 용도
+			 * name: 서버로 입력값 전송 시 사용하는 이름
+			 	- name이 있어야 데이터 전송 가능 -->
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>

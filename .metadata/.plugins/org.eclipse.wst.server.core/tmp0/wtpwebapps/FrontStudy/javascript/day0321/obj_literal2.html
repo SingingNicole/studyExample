@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>literal2</title>
+</head>
+<body>
+	<script>
+	let banana = {
+			name: "바나나",
+			price: 1500,
+			calcPrice: function(count = 0) {
+				return count * this.price; // 같은 객체 안에 있는 멤버를 사용할 경우 this.를 붙인다.
+			}
+		};
+	let melon = {
+			name: "멜론",
+			price: 7000,
+			calcPrice: function(count = 0){
+				return count * this.price;
+			}
+		};
+	document.write(banana.name + " 3개 가격: " + banana.calcPrice(3) + "원");
+	</script>
+</body>
+</html>

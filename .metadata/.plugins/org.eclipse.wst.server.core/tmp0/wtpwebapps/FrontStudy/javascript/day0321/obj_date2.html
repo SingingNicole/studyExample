@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>콜백함수+날짜값 계산</title>
+</head>
+<body onload="tomorrow()">
+	<!-- onload: body 로딩이 끝나면 바로 수행할 요소 -->
+	구입 날짜:
+	<input type="date" id="pdate">
+	<button onclick="checkDate()">검사</button>
+	<script>
+		let today = new Date();
+
+		function tomorrow() {
+			let day = today.getDate() + 1; // 날짜가 넘어간다면 자동으로 다음 달로 넘어감.
+			let tomo = new Date();
+			tomo.setDate(day);
+			let str = tomo.getFullYear() + "-"
+					+ ("0" + (tomo.getMonth() + 1)).slice(-2) + "-" // slice를 음수로 걸면 뒤에서부터 잘라온다.
+					// 월이 한 자리라면 0을 붙여 출력, 두 자리라면 뒤 두 자리만 출력 가능하도록 했음.
+					+("0" + tomo.getDate()).slice(-2);
+			console.log("내일: " + str);
+			document.getElementById("pdate").max = str;
+		} // 선택할 수 있는 가장 큰 날짜값을 지정 => 다음 날까지 선택할 수 있도록 활성화됨.
+
+		function checkDate() {
+			let s = document.getElementById("pdate").value; // 내가 선택한 날짜 값을 가져옴
+			let pdate = new Date(s); // input 태그에 지정된 값은 항상 String 문자열이므로 문자열을 Date 생성자에 다시 넣어 날짜값으로 변환한다.
+			let diff = today - pdate.getTime(); // 오늘 날짜와 내일 날짜를 뺌. 밀리세컨드로 구함.
+			// getTime() 사용하지 않아도 자동으로 변환됨.
+			let days = Math.floor(diff / (1000 * 60 * 60 * 24)); // 초, 분, 시간, 일 단위로 변환 / 소수점이 있으면 floor로 버림 처리.
+			// 날짜와 날짜간의 차를 구할 때는 항상 밀리세컨드로 구한다.
+			if (days > 30) {
+				alert("교환 기한이 지났습니다.")
+			}
+		}
+	</script>
+</body>
+</html>

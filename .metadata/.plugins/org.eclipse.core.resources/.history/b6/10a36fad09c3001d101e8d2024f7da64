@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>radio check</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>선택 항목</legend>
+			<h3>참가비</h3>
+			<input type="radio" id="free" name="pay" value="free">
+			<label for="free">무료</label>
+			<input type="radio" id="paid" name="pay" value="paid">
+			<label for="paid">유료</label>
+			<h3>선호하는 SNS</h3>
+			<input type="checkbox" id="insta" name="sns" value="instagram">
+			<label for="insta">instagram</label>
+			<input type="checkbox" id="kakao" name="sns" value="kakaotalk">
+			<label for="kakao">카톡</label>
+			<input type="checkbox" id="line" name="sns" value="line" checked>
+			<label for="line">라인</label>
+			<br>
+			<h3>사진 첨부</h3>
+			<input type="file" name="photo" id="photo" accept="image/*">
+			<label for="photo">사진 첨부</label>
+			<br>
+			<br>
+			<input type="submit" value="전송">
+			<!-- checkbox의 경우 이름이 같아도 매번 데이터를 보낸다.
+				 => 저장할 때에 string 배열로 저장한다. -->
+		</fieldset>
+	</form>
+</body>
+</html>

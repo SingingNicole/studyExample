@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>link에서 attr와 prop 값의 차이 테스트</title>
+</head>
+<body>
+	<p>
+		<a href="index.html">link</a>
+	</p>
+	<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		document.write($("a").attr("href")); // html문서상의 속성값(파일명)
+		document.write("<br>");
+		document.write($("a").prop("href")); // js상의 속성값 - 실제로 사용할 전체 경로
+		// js 안에서는 prop를 사용한다.
+	</script>
+</body>
+</html>

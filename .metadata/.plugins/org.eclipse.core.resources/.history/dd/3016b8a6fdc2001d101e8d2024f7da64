@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+</head>
+<body>
+	<!-- action을 지정하지 않으면 현재 URL이 다시 요청된다. -->
+	<form name="form1" method="get"></form>
+</body>
+</html>

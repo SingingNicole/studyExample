@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>removeClass 테스트</title>
+<style type="text/css">
+.red {
+	color: red;
+}
+</style>
+</head>
+<body>
+	<p class="red a">텍스트 텍스트 텍스트 텍스트 텍스트</p>
+	<script>
+	$(function() {
+		$("p").removeClass("red"); // red 클래스가 삭제되어 스타일이 적용되지 않는다.
+	}); // class 속성의 변경은 스타일의 변경과 주로 사용된다.
+	</script>
+</body>
+</html>

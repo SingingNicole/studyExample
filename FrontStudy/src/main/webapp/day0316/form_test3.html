@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form test 0316</title>
+</head>
+<body>
+	<form>
+	<input type="hidden" name="hidden1" value="data1">
+	<label for="id">ID: </label> <input name="id" id="id"
+		 autofocus placeholder="아이디" readonly value="기본값">
+		 <!-- placeholder: 힌트. 어떤 값을 입력해야 하는지 알려 주는 역할.
+		 				   클라이언트가 값을 입력하면 사라진다. -->
+		 <!-- required: 전송을 위한 필수 입력 값. submit 하였을 때 해당 값이 있는지 없는지 검사한다. -->
+		 <!-- readonly: value로 설정한 값을 변경할 수 없도록 한다. 읽기 전용.-->
+	<div>
+		<label for="email">email: </label>
+		<input type="email" name="email" id="email">
+		<br>
+		<label for="url">URL: </label>
+		<input type="url" name="url" id="url" required>
+		<br>
+		<label for="tel">PHONE: </label>
+		<input type="tel" name="tel" id="tel"
+		 pattern="010-[0-9]{4}-[0-9]{4}"
+		 title="010-####-####" required>
+		 <!-- title의 경우 pattern에 지정한 값과 맞지 않을 경우 출력할 메시지이다.
+		 	  pattern을 사용할 경우 정규 표현식에 맞는 형식의 데이터만 submit 가능하다. -->
+	</div>
+	<div>
+		color: 
+		<input type="color" name="color" value="#ffffff">
+		<br>
+		search: 
+		<input type="search" name="search">
+		<br>
+		사이즈: 
+		<input type="number" name="size" min="85" max="105" step="5" value="90">
+		<br>
+		갯수(최대 10):
+		<input type="range" name="count" min="1" max="10" value="3">
+	</div>
+	<input type="submit" value="전송">
+	</form>
+</body>
+</html>

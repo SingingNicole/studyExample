@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>radio check</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>선택 항목</legend>
+			<label>
+			
+			</label>
+			<input>
+		</fieldset>
+	</form>
+</body>
+</html>

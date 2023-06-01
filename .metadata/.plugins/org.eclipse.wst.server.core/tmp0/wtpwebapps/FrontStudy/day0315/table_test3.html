@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Table test 3</title>
+<style>
+table, th, td {
+	border: 1px solid #ccc;
+}
+
+td {
+	width: 100px; /* 셀 너비 */
+	height: 30px; /* 셀 높이 */
+}
+</style>
+</head>
+<body>
+	<table>
+		<colgroup>
+			<col><!-- 스타일 없음 -->
+			<col span="2" style="background-color: yellow">
+			<col style="background-color: lime">
+		</colgroup>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+	</table>
+</body>
+</html>

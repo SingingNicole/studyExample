@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>buttonTest</title>
+</head>
+<body>
+	<div>
+		<button type="button">일반 버튼입니다.</button><br>
+		<input type="button" value="일반 버튼">
+	</div>
+	<div>
+		<button type="submit">전송하기</button>
+		<input type="submit" value="전송 버튼">
+		<input type="image" src="../img/dot.png" width="20" height="20">
+	</div>
+	
+	
+</body>
+</html>

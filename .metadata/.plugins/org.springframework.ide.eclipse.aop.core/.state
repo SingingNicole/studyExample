@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Ex02_JavaCodeDI"/>
+<aop-project name="Ex03_AnnotationDI"/>
+<aop-project name="RitaSpringJava"/>
+</aop-reference-model>

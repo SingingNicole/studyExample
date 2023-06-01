@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>셀렉터 연습</title>
+<style>
+#target {
+	color: purple;
+}
+
+h1 {
+	color: blue ! important; /* !important가 가장 우선순위를 가진다. */
+	/* important가 없을 경우 id > 클래스 > 태그 순으로 지정된다. */
+}
+
+.type1 {
+	text-align: center;
+}
+
+body {
+	color: navy;
+}
+</style>
+<!-- style 시트가 여러 개 적용된다면 가장 최근의 스타일 시트가 우선 순위를 갖는다. -->
+</head>
+<body>
+	<h1 id="target" class="type1">This is headline.</h1>
+	<h2 id="target" class="type1">This is headline2.</h2>
+	<p class="type1">This is paragraph.</p>
+	<p>This is paragraph2.</p>
+	<div>This is divide.</div>
+	<!-- 스타일은 상속된다!(Cascade)
+		 부모에 적용된 스타일을 그대로 물려받는다. -->
+</body>
+</html>

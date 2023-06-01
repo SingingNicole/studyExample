@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <!-- 경로에 맞추어 반드시 mapper 파일을 작성한다. -->
+ <!-- 이후 어노테이션으로 대체 가능 - springboot에서는 xml 설정을 권장하지 않음. -->
+<mapper namespace="com.example.dao.DeptDao"> <!-- 해당 파일과 mapping 한다. -->
+	<!-- id와 DAO 파일을 연결 -->
+<!-- 	<insert id="addDept" parameterType="com.example.dto.Dept">
+		insert into dept (deptno, dname, loc)
+		values(#{deptno}, #{dname}, #{loc})
+	</insert> -->
+	<update id="updateDept" parameterType="com.example.dto.Dept">
+		update dept
+		<set>
+			<if test="dname != ''">dname=#{dname},</if>
+			<if test="loc != ''">loc=#{loc}</if>
+		</set>
+		where deptno = #{deptno}
+	</update>
+<!-- 	<delete id="deleteDept" parameterType="int">
+		delete from dept where deptno = #{deptno}
+	</delete> -->
+<!-- 	<select id="deptAll" resultType="com.example.dto.Dept">
+	resultType에 지정한 변수와 이름이 같은 데이터를 저장.
+	resultType의 타입 지정은 sql 명령어를 살피고 리턴할 데이터에 따라 정한다.
+	가져올 데이터의 양이 많다면 DTO, 적다면 HashMap, 한 타입의 데이터만 리턴한다면 해당 리턴 타입을 적는다.
+		select * from dept order by deptno
+	</select> -->
+	<select id="allDeptno" parameterType="int" resultType="com.example.dto.Dept">
+		select * from dept where deptno = #{deptno}
+	</select>
+	<select id="newDeptno" resultType="int">
+		select max(deptno) + 10 as max from dept
+	</select>
+	<select id="searchDept" parameterType="String" resultType="com.example.dto.Dept">
+		select * from dept where dname like concat('%', #{dname}, '%')
+		<!-- concat절 작성 시 주의한다. + 가 아니라 ,임!!!!!! -->
+	</select>
+	<!-- parameterType: 매개변수와 일치시킨다. -->
+</mapper>  

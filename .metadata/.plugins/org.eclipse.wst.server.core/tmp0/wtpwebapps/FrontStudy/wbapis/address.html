@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>주소 검색 예제</title>
+</head>
+<body>
+	<form name="post">
+		<label for="zonecode">우편번호</label>
+		<input name="zonecode" id="zonecode" readonly>
+		<button type="button" onclick="searchPostcode()">우편번호 검색</button><br>
+		<label for="address">주소</label>
+		<input name="address" id="address" size="50">
+	</form>
+
+	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script>
+	function searchPostcode() {
+		new daum.Postcode({
+        	oncomplete: function(data) {
+            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+           	// 예제를 참고하여 다양한 활용법을 확인해 보세요.
+           	let addr = '';
+            if(data.userSelectedType === 'R'){ // userSelectType: 검색 결과에서 사용자가 선택한 주소의 타입
+            	// R: 도로명주소, J: 지번주소
+            	addr = data.roadAddress; // 도로명주소
+            } else {
+            	addr = data.jibunAddress; // 지번주소
+            }
+            // 사용자가 선택한 도로명주소/지번주소 값을 저장하여 addr에 저장.
+           		document.getElementById("zonecode").value = data.zonecode;
+            	document.getElementById("address").value = addr; // 사용자가 선택한 값에 맞추어 주소 출력
+        	}
+		}).open();
+	}
+	</script>
+</body>
+</html>

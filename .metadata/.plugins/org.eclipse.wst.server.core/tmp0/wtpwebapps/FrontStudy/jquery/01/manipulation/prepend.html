@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>pretend 테스트</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$("p#first").prepend("<strong> 앞부분에 삽입</strong>"); // prepend 명령어는 태그까지 인식한다.
+	});
+</script>
+</head>
+<body>
+	<p id="first"> 텍스트 텍스트</p>
+</body>
+</html>

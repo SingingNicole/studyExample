@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>전역변수와 지역변수1</title>
+<script>
+	let scope = "global"; // function 밖에서 선언된 전역변수이다.
+	function checkscope() {
+		let scope = "local"; // 해당 함수 안에서는 지역변수가 우선권을 가진다.
+		document.write(scope);
+	}
+	checkscope(); // 함수 호출, 함수에 메모리를 할당해 실행한다.
+	document.write("<br>");
+	document.write(scope); // 호출이 끝나 지역변수 scope는 메모리를 반납하고, 전역변수 scope가 출력된다.
+</script>
+</head>
+<body>
+</body>
+</html>

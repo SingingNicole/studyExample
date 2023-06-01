@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가시성 테스트_hidden</title>
+<style>
+#a {
+	visibility: hidden;
+	border: 1px dotted red;
+	/* hidden을 사용하면 객체의 투명도를 0으로 만든다. 
+	   사이즈를 0으로 만드는 display: none;과는 다르다.*/
+}
+
+#b {
+	visibility: visible;
+	border: 1px dotted red;
+}
+</style>
+</head>
+<body>
+	<h1>Visibility 속성</h1>
+	<img id="a" src="../img/Leesang.jpg" width="150" alt="이상">
+	<img id="b" src="../img/d84660d4-c19c-4ee8-b07a-185be870e9f9.jpg" width="150" alt="황순원">
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getJSON 예제2</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$("button").click(function() {
+			$.getJSON("https://jsonplaceholder.typicode.com/users", function(data) {
+				let user1 = data[0];
+				$("#result1").append(
+					"번호: " + user1.id + " 이름: " + user1["name"] + " 회사명: " + user1.company.name + "<br>"
+				);
+				data.forEach(function(item, index) {
+					$("#result2").append(
+							`
+						${item.address.street} ${item.address.suite} ${item.address.city} ${item.address.zipcode} <br> 
+						${item.address.geo.lat} ${item.address.geo.lng} <br> `
+					)
+				});
+			}); // ajax end
+		}); // click end
+	}); // ready end
+</script>
+</head>
+<body>
+	<button>클릭</button>
+	<div id="result1"></div>
+	<div id="result2"></div>
+</body>
+</html>

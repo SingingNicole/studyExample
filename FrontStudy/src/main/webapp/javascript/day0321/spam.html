@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스팸 메일 체크</title>
+</head>
+<body>
+	<script>
+		function checkSpam(str) {
+			let lowerStr = str.toLowerCase(); // 검사할 내용을 전부 소문자로 변경
+
+			let reg1 = /viagra/;
+			let reg2 = /x{2,}/g; // x가 여러 개 등장해도 매칭
+
+			// return reg1.test(lowerStr) || reg2.test(lowerStr);
+			return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+		} // true가 리턴된다면 spam임. 포함하고 있으면 true, 아니면 false.
+		// 해당 함수에서는 viagra 혹은 xxx를 가지고 있는 문자열을 spam으로 true 처리한다.
+
+		if (checkSpam('buy ViAgRA now')) {
+			document.write("\'buy ViAgRA now'\ is a spam.");
+		} else {
+			document.write("\'buy ViAgRA now'\ is not a spam.");
+		}
+
+		alert(checkSpam('free xxxxx'));
+		alert(checkSpam("innocent rabbit"));
+	</script>
+</body>
+</html>

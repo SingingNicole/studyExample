@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+	<!-- web worker: 백(back) 단위에서 업무를 독립적으로 수행하고 반환한다. -->
+	<h2>JavaScript Web Workers API</h2>
+	<p>
+		Count numbers:
+		<output id="result"></output>
+	</p>
+	<button onclick="startWorker()">Start Worker</button>
+	<button onclick="stopWorker()">Stop Worker</button>
+	<button onclick="alert('작업중이지만 클릭 가능')">test</button>
+	<!-- back에서 작업하고 있기 때문에 alert 창이 띄워져 있는 상태에서도 작업이 진행된다. -->
+	<script>
+		let w;
+
+		function startWorker() {
+			if (typeof (w) == "undefined") { // w의 값이 정해지지 않음.
+				w = new Worker("demo_workers.js"); // background에서 수행하는 독립적 개체 생성
+				//백그라운드에서 독립적으로 수행. 
+			}
+			w.onmessage = function(event) { //메세지를 post하면 리스너(onmessage) 함수가 실행된다.
+				document.getElementById("result").innerHTML = event.data;
+				// 이벤트가 발생했을 때 내용을 저장하여 result에 보낸다.
+			};
+		}
+
+		function stopWorker() {
+			w.terminate(); // worker 종료
+			w = undefined; // w의 값을 초기화하여 worker가 처음부터 다시 작업할 수 있도록 설정
+		}
+	</script>
+</body>
+</html>

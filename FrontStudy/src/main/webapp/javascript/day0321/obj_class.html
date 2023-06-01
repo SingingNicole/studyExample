@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class</title>
+</head>
+<body>
+	<script>
+		class Fruit {
+			constructor(name, price) {
+				this.name = name;
+				this.price = price;
+			}
+			calcPrice(count = 0) {
+				return count * this.price;
+			}
+		}
+		let banana = new Fruit("banana", 1500);
+		document.write(banana.name + " 5개 가격: " + banana.calcPrice(5) + "원");
+		document.write("<br>");
+		let melon = new Fruit("melon", 7000);
+		document.write(melon.name + " 2개 가격: " + melon.calcPrice(2) + "원");
+	</script>
+</body>
+</html>

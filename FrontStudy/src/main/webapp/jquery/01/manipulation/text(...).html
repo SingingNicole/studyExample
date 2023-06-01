@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>text(...)예시</title>
+</head>
+<body>
+	<p id="first">변경전</p>
+	<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(function() {
+			$("p#first").text("변경후"); // p 태그 중 id가 first인 요소의 텍스트를 괄호 안의 값으로 변경.
+		});
+	</script>
+</body>
+</html>

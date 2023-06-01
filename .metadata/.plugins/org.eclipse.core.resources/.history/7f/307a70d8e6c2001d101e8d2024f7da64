@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>iframe test</title>
+</head>
+<body>
+	<p>iframe은 외부 문서의 실행 결과를 현재 화면에 출력한다.</p>
+	<iframe src="inner.html" width="300" height="150"></iframe>
+</body>
+</html>

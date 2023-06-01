@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>절대 위치 설정 2</title>
+<style>
+#one {
+	background-color: cyan;
+	width: 200px;
+	height: 50px;
+}
+
+#two {
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+	background-color: yellow;
+	width: 200px;
+	height: 50px;
+}
+
+#three {
+	background-color: lightgreen;
+	width: 200px;
+	height: 50px;
+}
+
+#container{
+	background-color: #eeeeee; /* eee로도 표현 가능하다. */
+	position: relative; /* 부모 태그의 경우 포지션 값이 relative여야 적용된다. */
+	/* two 태그의 부모 태그가 container이므로 container를 기준으로 absolut 이동이 적용된다.
+	   포지션이 relative지만 기본적으로 static으로 적용된다. */
+	width: 500px;
+	height: 100px;
+}
+</style>
+</head>
+<body>
+	<p id="one">block #1</p>
+	<div id="container">
+		<div id="two">
+			block #2<br/> position:static;<br/>
+		</div>
+	</div>
+	<p id="three">block #3</p>
+</body>
+</html>

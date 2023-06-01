@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>예외처리</title>
+</head>
+<body>
+	<script>
+		//alert("try 시작");
+		// lalala; => 변수 이름으로 인식되어 error 발생한다.
+		try {
+			alert("try 시작");
+			lalala;
+		} catch (exception) {
+			alert("예외 발생: " + exception.message + ", " +  exception + ", " + exception.discription); // exception을 catch하여 alert 실행
+		}
+	</script>
+</body>
+</html>

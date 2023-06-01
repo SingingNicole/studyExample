@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>input에서 attr와 prop 값의 차이 테스트</title>
+</head>
+<body>
+	<form>
+		<input type="checkbox" id="example" checked="checked">example
+	</form>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		console.log($("#example").attr("checked")); // checked
+		console.log($("#example").prop("checked")); // true
+		
+		$("#example").prop("checked", false);
+		
+		// attr은 바뀐 상태를 인식하지 못한다.
+		// 문서 상에 명시된 상태를 우선하기 때문에 체크를 해제해도 해당 상태 값을 가져온다.
+		console.log($("#example").attr("checked")); // checked 상태가 아님에도 명시되어 있는 기본값 checked라는 값을 가져옴.
+		console.log($("#example").prop("checked"));
+	});
+</script>
+</body>
+</html>

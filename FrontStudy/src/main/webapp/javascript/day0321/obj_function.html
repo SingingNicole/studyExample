@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function 생성자</title>
+</head>
+<body>
+	<script>
+		function Car(model) {
+			this.model = model;
+			this.speed = 0;
+			this.stop = () => {
+				this.speed -= 10;
+			}
+			this.accel = () => {
+				this.speed += 10;
+			}
+		}
+		let myCar = new Car("부가티");
+		myCar.accel();
+		myCar.accel();
+		document.write(myCar.model + ": " + myCar.speed + "m/s");
+	</script>
+</body>
+</html>

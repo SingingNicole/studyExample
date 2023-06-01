@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sessionStorage 예제</title>
+</head>
+<body>
+	<p id="demo"></p>
+
+	<script>
+		sessionStorage.setItem("name","Jane Doe");
+		document.getElementById("demo").innerHTML = sessionStorage.getItem("name");
+		// sessionStorage.removeItem("name");
+		// clear();
+		// 일반적으로 종료하면 자동적으로 삭제되기 때문에 굳이 remove 하지는 않는다.
+	</script>
+</body>
+</html>
+
+<!-- 
+객체가 하나의 세션에 대한 데이터를 저장합니다.
+브라우저를 닫으면 데이터가 삭제됩니다.
+ -->

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+div {
+	border: 5px solid gray;
+	padding: 15px;
+}
+
+p{
+	color: maroon;
+}
+
+/* css 주석은 해당 모양으로 적는다. */

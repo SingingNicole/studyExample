@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>geolocation 예제</title>
+<!-- navigator.geolocation.getCurrentPosition(position => {
+  const { latitude, longitude } = position.coords;
+  // Show a map centered at latitude / longitude.
+}); -->
+</head>
+<body>
+	<h2>JavaScript Geolocation</h2>
+	<p>Click the button to get your coordinates.</p>
+	<button onclick="getLocation()">Try It</button>
+	<p id="demo"></p>
+
+	<script>
+
+		const x = document.getElementById("demo");
+
+		function getLocation() {
+			try {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			} catch {
+				x.innerHTML = err;
+			}
+		}
+
+		function showPosition(position) {
+			x.innerHTML = "Latitude: " + position.coords.latitude + "<br>"
+			+ "<br>Longtitude: " + position.coords.longtitude + "<br>"
+			/** + 
+		  	"국가: " + position.address.country_name + "<br>" + 
+		 	 "시: " + position.address.city + "<br>" + 
+		 	 "우편번호: " + position.address.postalCode + "<br>" + 
+		  	"거리 이름: " + position.address.street + "<br>"; **/
+		}
+
+	</script>
+</body>
+</html>

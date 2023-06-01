@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>박스 사이징</title>
+<style>
+	div {
+		width:300px; height: 100px; padding: 50px;
+	}
+	
+	.div1 {
+		border: 1px solid blue;
+		box-sizing: content-box;
+	}
+	/* 컨텐츠 박스를 사용할 경우 width = content의 width */
+	.div2 {
+		border: 1px solid red;
+		box-sizing: border-box;
+	}
+	 /* width = content + padding + border  
+		 	패딩/경계선의 크기가 달라도 element의 크기를 통일하기 쉬워서 사용한다.
+		 */
+</style>
+</head>
+<body>
+	<h1>Without box-sizing</h1>
+	<div class="div1">This div is smaller(width is 300px and height is 100px).</div><br>
+	<div class="div2">This div is bigger(width is also 300px and height is 100px).</div>
+</body>
+</html>

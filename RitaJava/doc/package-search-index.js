@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"day0119.classex"},{"l":"day0119.variable.primitive"},{"l":"day0119.variable.reference"},{"l":"day0120.operator"},{"l":"day0120.test.variable"},{"l":"day0125.exercise"}];updateSearchResults();

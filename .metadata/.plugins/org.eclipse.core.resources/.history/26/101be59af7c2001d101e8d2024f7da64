@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Image_map</title>
+</head>
+<body>
+	<img src="../img/Cheetah_(Acinonyx_jubatus)_female_2.jpg" alt="이미지 맵">
+	<map name="">
+		<area shape="모양" coords="좌표" href="링크" target="_blank">
+	</map>
+</body>
+</html>

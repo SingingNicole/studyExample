@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 연습 4</title>
+</head>
+<body>
+	<script>
+		function ok() {
+			alert("동의하셨습니다.");
+		}
+		function cancel() {
+			alert("취소하셨습니다.")
+		}
+		function ask(question, yes, no) {
+			if (confirm(question)) {
+				yes();
+			} else {
+				no();
+			}
+		}
+		ask('동의하십니까?', ok, cancel); // 매개변수로 함수 객체도 전달받을 수 있다.
+	</script>
+</body>
+</html>

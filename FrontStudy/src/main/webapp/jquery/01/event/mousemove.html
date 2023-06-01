@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mousemove 예제</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$("img").mousemove(function(e) { // 발생한 이벤트 객체를 가져오는 매개변수 e
+			$("p").html("현재 X좌표: " + e.clientX + "<br/> 현재 Y좌표: " + e.clientY);
+		// x 좌표와 y좌표를 지속적으로 p 태그 안에 입력한다.
+		});
+	});
+</script>
+</head>
+<body>
+	<img alt="꽃" src="flower.jpg">
+	<p></p>
+</body>
+</html>

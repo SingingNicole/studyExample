@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>datalist, textarea test</title>
+<style>
+	textarea {
+		resize: none; /* 옵션을 걸지 않으면 사이즈 조절이 가능하다. */
+	}
+</style>
+</head>
+<body>
+	<form>
+		<h4>좋아하는 고양잇과 동물</h4>
+		<input type="text" name="cat" list="cats">
+		<datalist id="cats">
+			<option value="고양이" label="cat">
+			<option value="호랑이" label="tiger">
+			<option value="사자" label="lion">
+			<!-- label을 지우고 value 값만 출력 가능.
+				 value 값이 실제 입력되는 값이다. -->
+		</datalist>
+		<!-- 리스트 외의 텍스트도 입력 가능하다. -->
+		<h4>memo</h4>
+		<textarea name="memo" rows="5" cols="30" placeholder="메모를 남기세요."></textarea>
+		<!-- textarea 사이는 기본값이므로 기본값이 없으면 입력/줄바꿈 하지 않는다.
+			 textarea 사이에는 tag를 넣어도 실행되지 않는다. -->
+		<h4>진행 상태 보여주기</h4>
+		<progress value="30" max="100"></progress>
+		<progress value="50" max="100"></progress>
+		<progress value="50" max="60"></progress>
+		<!-- value 값이 max 값에서 차지하는 퍼센트를 보여 준다. -->
+		<input type="submit" value="전송">
+		<h4>meter</h4>
+		<label>점유율 80%</label>
+		<meter value="0.8"></meter>
+		<!-- 최댓값을 지정하지 않으면 0부터 1까지에서 value가 차지하는 퍼센트를 보여 준다. -->
+		<br>
+		<label>점유율 64%</label>
+		<meter value="64" min="0" max="100"></meter>
+		<label>허용 범위 초과</label>
+		<meter value="9216" min="1024" max="10240"
+		 low="2048" high="8192"></meter>
+		 <br>
+		<label>허용 범위 내</label>
+		<meter value="2050" min="1024" max="10240"
+		 low="2048" high="8192"></meter>
+		<label>허용 범위 미만</label>
+		<meter value="100" min="1024" max="10240"
+		 low="2048" high="8192"></meter>
+		 <br>
+		<label>최적값 지정</label>
+		<meter value="0.9" optimum="0.8" low="0.3" high="0.7"></meter>
+		<!-- optimum: 최적값
+			 최적값이 low보다 낮을 경우: value가 낮을 수록 좋음
+			 최적값이 high보다 높을 경우: value 값이 높아야 좋음
+			 최적값에 가까울 수록 적당하다. -->
+	</form>
+	<form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+		<input type="number" name="num1" value="0">
+		+<input type="number" name="num2" value="0">
+		=<output name="result" for="num"></output>
+	</form>
+</body>
+</html>

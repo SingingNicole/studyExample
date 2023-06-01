@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;addDept.java&apos; to &apos;day0310.jdbc.dept.DeptDAO.java&apos;&#x0D;&#x0A;- Original project: &apos;BookExample&apos;&#x0D;&#x0A;- Destination element: &apos;day0310.jdbc.dept.DeptDAO.java&apos;&#x0D;&#x0A;- Original element: &apos;array.example.addDept.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=MarJDBC/src&lt;day0310.jdbc.dept{DeptDAO.java" element1="/src&lt;array.example{addDept.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1678669817216" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>캐스팅 테스트2</title>
+</head>
+<body>
+	이름(필수항목): 
+	<input name="name" id="name" placeholder="이름">
+	<button type="button" onclick="check()">확인</button>
+	<p id="result"></p>
+	<script>
+		function check() {
+			let name = document.querySelector("#name").value; // 현재 문서에서 id가 name인 태그를 찾는다.
+			if (name) {
+				document.querySelector("#result").innerHTML="이름을 입력했습니다."; // 시작과 종료 태그 사이에 입력할 경우 innerHTML을 사용한다.
+			} else {
+				document.querySelector("#result").innerHTML="이름을 입력하지 않았습니다.";
+			}
+		}
+	</script>
+</body>
+</html>

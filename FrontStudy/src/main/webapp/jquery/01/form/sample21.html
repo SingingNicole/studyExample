@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sample21</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		$("select").change(function(){
+			if ($(":selected").val() == "10대") { // option 태그 중 value가 10대인 선택지를 고른 경우
+				$("input").val(""); // 입력했던 값이 있다면 초기화
+				$("input").attr("disabled", "disabled"); // input 선택지를 disabled로 바꾼다.
+			} else {
+				$("input").removeAttr("disabled"); // 10대가 아닌 값이 설정되었을 경우 부여되었던 disabled 속성을 삭제한다.
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<p>나이: 
+	<select name="age">
+		<option value="선택해주세요">선택해주세요</option>
+		<option value="10대">10대</option>
+		<option value="20대">20대</option>
+		<option value="30대">30대</option>
+		<option value="40대 이상">40대 이상</option>
+	</select>
+	</p>
+	<p>좋아하는 술: <input type="text"/></p>
+</body>
+</html>

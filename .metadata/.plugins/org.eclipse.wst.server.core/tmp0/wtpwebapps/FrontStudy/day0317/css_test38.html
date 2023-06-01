@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상대 위치 설정</title>
+<style>
+#one {
+	background-color: cyan;
+	width: 200px;
+	height: 50px;
+}
+
+#two {
+	position: relative;
+	left: 30px;
+	top: 30px;
+	/* relative 포지션일 경우 static 포지션을 기준으로 정한 px만큼 움직인다. */
+	background-color: yellow;
+	width: 200px;
+	height: 50px;
+}
+
+#three {
+	background-color: lightgreen;
+	width: 200px;
+	height: 50px;
+}
+</style>
+</head>
+<body>
+	<p id="one">block #1</p>
+	<div id="two">
+		block #2<br/> position:static;<br/>
+	</div>
+	<p id="three">block #3</p>
+</body>
+</html>
