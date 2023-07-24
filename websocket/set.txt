@@ -1,0 +1,3 @@
+npm i -D nodemon
+npm i express express-session cookie-parser dotenv morgan nunjucks
+npm i ws@8

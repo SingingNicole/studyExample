@@ -1,0 +1,15 @@
+* DB 작업
+create database nodebird;
+grant all privileges on nodebird.* to nodejs@'%' with grant option;
+
+mysql root >
+create database nodebird;
+grant all privileges on nodebird.* to nodejs@'%' with grant option;
+
+* npm 입력 목록
+    npm i express morgan nunjucks cookie-parser express-session multer dotenv
+    npm i -D nodemon
+    npm i passport passport-local passport-kakao bcrypt
+
+* 테이블 생성
+    npx sequelize db:create

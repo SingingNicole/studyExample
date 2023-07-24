@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+
+<!-- numjaks 문법으로 작성된 error 메시지 양식 -->
+{% block content %} <!-- content 레이아웃은 유지, 바로 아래 상태 메시지 출력-->
+  <h1>{{message}}</h1>
+  <h2>{{error.status}}</h2>
+  <pre>{{error.stack}}</pre>
+{% endblock %}
